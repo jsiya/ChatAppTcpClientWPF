@@ -1,0 +1,51 @@
+﻿<Window x:Class="Client.ChattingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="ChattingWindow" Height="450" Width="800"
+        Closed="Window_Closed"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                    Name="MsgTextBlock"
+                    IsEnabled="False"
+                    >
+
+        </TextBlock>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            
+            <TextBox x:Name="MsgTxtBox"
+                     Grid.Column="0"
+                     Margin="10 30"
+                     VerticalContentAlignment="Center"
+                     FontSize="20"
+                     TextChanged="MsgTxtBox_TextChanged"/>
+            <Button x:Name="SendBtn"
+                    Grid.Column="1"
+                    Margin="20 30 50 30"
+                    Content="Send"
+                    FontSize="20"
+                    Foreground="White"
+                    Background="CornflowerBlue"
+                    BorderThickness="0"
+                    Click="SendBtn_Click"
+                    IsEnabled="False"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
